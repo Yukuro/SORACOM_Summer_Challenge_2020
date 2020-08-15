@@ -1,0 +1,21 @@
+{
+  "Comment": "A Hello World example of the Amazon States Language using Pass states",
+  "StartAt": "authAPI",
+  "States": {
+    "authAPI": {
+      "Type": "Task",
+      "Resource": " [[FUNCTION ARN]] ",
+      "Next": "get_from_Harvest"
+    },
+    "get_from_Harvest": {
+      "Type": "Task",
+      "Resource": "[[FUNCTION ARN]]",
+      "Next": "send_to_Slack"
+    },
+    "send_to_Slack": {
+      "Type": "Task",
+      "Resource": " [[FUNCTION ARN]] ",
+      "End": true
+    }
+  }
+}
